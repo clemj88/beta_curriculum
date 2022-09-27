@@ -40,7 +40,11 @@ blank3 = "code"
 Enter your solution below.
 
 ```elixir
+blank_1 = "girl"
+blank_2 = "letters"
+blank_3 = "art"
 
+"A programmer is a " <> blank_1 <> " that turns " <> blank_2 <> " into " <> blank_3
 ```
 
 ## String Interpolation Madlib
@@ -65,7 +69,7 @@ blank3 = "foobar"
 Enter your solution below.
 
 ```elixir
-
+"#{blank_1} and #{blank_2} combined makes #{blank_3}"
 ```
 
 ## Commit Your Progress
