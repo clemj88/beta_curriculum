@@ -87,7 +87,13 @@ Given a `player_choice` of either `:rock`, `:paper`, or `:scissors` determining 
 Enter your solution below.
 
 ```elixir
+player_choice = :paper
 
+cond do
+  player_choice == :rock -> :paper
+  player_choice == :paper -> :scissors
+  player_choice == :scissors -> :rock
+end
 ```
 
 ## Create Two Player Rock Paper Scissors
@@ -154,7 +160,10 @@ Given `player1` and `player2` select either `:rock`, `:paper`, or `:scissors`, r
 Enter your solution below.
 
 ```elixir
+player1 = :rock
+player2 = :paper
 
+player1 == player2 && "Draw" || 
 ```
 
 ## Commit Your Progress
