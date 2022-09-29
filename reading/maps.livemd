@@ -85,7 +85,7 @@ Utils.feedback(:string_key_map, map)
 Create a map with atom keys and any value. Replace `nil` with your answer.
 
 ```elixir
-map = %{taco: "cat"}
+map = %{taco: "cat", two: "friend"}
 
 Utils.feedback(:atom_key_map, map)
 ```
