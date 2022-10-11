@@ -97,7 +97,13 @@ In the Elixir cell below, create a `Math` module with a function `add` that adds
 together.
 
 ```elixir
+defmodule Math do
+  def add(int1, int2) do
+    int1 + int2
+  end
+end
 
+Math.add(2, 3)
 ```
 
 ## Internal Module Functions
@@ -144,7 +150,13 @@ defmodule InspectorGadget do
   def gogo(gadget) do
     "Go go gadget #{gadget}!"
   end
+
+  def arms do
+    gogo("arms")
+  end
 end
+
+InspectorGadget.arms()
 ```
 
 ## Private Functions
@@ -264,7 +276,19 @@ MyModule.SubModule.my_function()
 In the Elixir cell below, create two submodules under as single namespace.
 
 ```elixir
+defmodule Module.Sub1 do
+  def fun1 do
+    "return 1"
+  end
+end
 
+defmodule Module.Sub2 do
+  def fun2 do
+    "return 2"
+  end
+end
+
+Module.Sub2.fun2()
 ```
 
 ## Module Attributes
@@ -435,7 +459,17 @@ Create a `Math` module with `add/2` and `add/3` functions. Each should add all o
 together.
 
 ```elixir
+defmodule Math do
+  def add(int1, int2) do
+    int1 + int2
+  end
 
+  def add(int1, int2, int3) do
+    int1 + int2 + int3
+  end
+end
+
+Math.add(2, 3, 4)
 ```
 
 ## Default Arguments
@@ -495,7 +529,13 @@ Greeter.greet("HI")
 In the Elixir cell below, define a module with a function that uses a default argument.
 
 ```elixir
+defmodule Practice do
+  def play(name \\ "Peter", status) do
+    "#{name} #{status}"
+  end
+end
 
+Practice.play("wins!")
 ```
 
 ## Commit Your Progress
