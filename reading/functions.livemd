@@ -270,7 +270,7 @@ You can use <code>rem</code> to determine if an integer is even with <code>rem(i
 </details>
 
 ```elixir
-is_even? = nil
+is_even? = fn integer -> rem(integer, 2) == 0 end
 
 Utils.feedback(:is_even?, is_even?)
 ```
@@ -322,7 +322,7 @@ Create a multi-parameter `calculate_force/2` function.
 Replace `nil` with your anonymous function.
 
 ```elixir
-calculate_force = nil
+calculate_force = fn mass, acceleration -> mass * acceleration end
 
 Utils.feedback(:calculate_force, calculate_force)
 ```
@@ -357,7 +357,7 @@ Using shorthand syntax, create a `calculate_force` function which multiplies `ma
 Replace `nil` with your answer.
 
 ```elixir
-calculate_force = nil
+calculate_force = &(&1 * &2)
 
 Utils.feedback(:calculate_force, calculate_force)
 ```
@@ -403,7 +403,7 @@ argument and call that function with the integer `20`.
 Replace `nil` with your anonymous function.
 
 ```elixir
-call_with_20 = nil
+call_with_20 = fn function -> function.(20) end
 
 Utils.feedback(:call_with_20, call_with_20)
 ```
@@ -503,7 +503,10 @@ add = fn int1, int2 -> int1 + int2 end
 multiply = fn int1, int2 -> int1 * int2 end
 subtract = fn int1, int2 -> int1 - int2 end
 
-answer = nil
+answer =
+  add.(10, 2)
+  |> multiply.(5)
+  |> subtract.(4)
 
 Utils.feedback(:pipe_operator, answer)
 ```
