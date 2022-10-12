@@ -166,7 +166,7 @@ defmodule Person do
   end
 end
 
-{:ok, person} = Person.new("Peter")
+{:ok, person} = Person.new("Jen")
 
 Person.greet(person)
 ```
@@ -187,7 +187,17 @@ Person.greet(person)
   `"#{greeting} I am #{hero.name}"`
 
 ```elixir
+defmodule Hero do
+  defstruct [:name, :catchphrase, :secret_identity]
 
+  def reveal(hero) do
+    "I am secretly #{hero.secret_identity}"
+  end
+
+  def introduce(greeting, hero) do
+    "#{greeting}, I am #{hero.name}"
+  end
+end
 ```
 
 ### Your Turn
@@ -205,19 +215,23 @@ classDiagram
 ```
 
 ```elixir
-
+spider_man = %{
+  name: "Spider Man",
+  catchphrase: "Friendly nieghborhood Spiderman!",
+  secret_identity: "Peter Parker"
+}
 ```
 
 Use the `Hero.introduce/2` function on `spider_man`.
 
 ```elixir
-
+Hero.introduce("Hola", spider_man)
 ```
 
 Use the `Hero.reveal/1` function on `spider_man`.
 
 ```elixir
-
+Hero.reveal(spider_man)
 ```
 
 ### Updating A Struct
