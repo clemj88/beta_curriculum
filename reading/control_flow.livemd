@@ -108,7 +108,7 @@ It's "Paper" and "Rock". player1 should win, but instead player2 wins.
 </details>
 
 ```elixir
-
+RockPaperScissors.play("Paper", "Rock")
 ```
 
 ### Clear Control Flow
@@ -260,7 +260,7 @@ or `"Good afternoon!"`.
 Replace `8` with a time in the afternoon using 24 hour format. See that it now runs `"Good afternoon!"`
 
 ```elixir
-current_hour = 8
+current_hour = 15
 
 if current_hour < 12 do
   "Good morning!"
@@ -280,7 +280,7 @@ Keep in mind that else allows for every other condition, so it can sometimes cre
 results.
 
 ```elixir
-current_hour = 13
+current_hour = 7
 
 if current_hour >= 12 do
   "Good Afternoon!"
@@ -328,7 +328,13 @@ to `20` will be hot.
 Enter your answer in the Elixir cell below.
 
 ```elixir
+temp = 8
 
+if temp >= 20 do
+  "hot"
+else
+  "cold"
+end
 ```
 
 ## Unless
@@ -382,7 +388,11 @@ In the Elixir cell below
 * Create an `unless` statement. which returns `"awake"` unless `tired`.
 
 ```elixir
+tired = false
 
+unless tired do
+  "awake"
+end
 ```
 
 ## Case
@@ -504,7 +514,7 @@ try changing the `weather` variable by binding it to `"rainy"` and re-evaluate t
 Elixir cell. Try that again with `"cold"`, and `"snowy"`.
 
 ```elixir
-weather = "sunny"
+weather = "cold"
 
 case weather do
   "sunny" -> "wear a t-shirt"
@@ -524,7 +534,7 @@ if it matches any of the cases. It then executes the first case that matches.
 ````elixir
 frames = [
   "
-We create a case statement.
+ew create a case statement.
 ```elixir
 case \"snowy\" do
   \"sunny\" -> \"wear a t-shirt\"
@@ -824,7 +834,14 @@ The conditions for `grade` should be:
 * 1-54 is a D
 
 ```elixir
+grade = 12
 
+cond do
+  grade >= 85 && grade <= 100 -> "A"
+  grade >= 70 && grade <= 84 -> "B"
+  grade >= 55 && grade <= 59 -> "C"
+  grade >= 1 && grade <= 54 -> "F"
+end
 ```
 
 ## Commit Your Progress
